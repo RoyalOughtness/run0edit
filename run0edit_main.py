@@ -390,7 +390,7 @@ def run(
     no_prompt: bool = False,
 ) -> int:
     """Main program to run for a given file."""
-    path = os.path.realpath(path)
+    path = os.path.abspath(path)
     try:
         validate_path(path)
     except InvalidPathError as e:

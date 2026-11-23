@@ -658,7 +658,6 @@ def run(  # noqa: C901  # ignore cyclomatic complexity lint on this function
     Copy file to temp file, run editor, and copy temp file back to target file.
     Raises Run0editError if a step fails.
     """
-    original_file = os.path.realpath(original_file)
     try:
         original_fd, original_file_exists = get_fd_for_original(original_file)
     except NoDirectoryError:
